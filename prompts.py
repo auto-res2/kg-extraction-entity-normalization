@@ -110,6 +110,39 @@ def build_extraction_prompt(
 上記の文書からエンティティと関係を抽出してください。{mode_instruction}"""
 
 
+def build_span_entity_prompt(doc_text: str, few_shot_text: str) -> str:
+    """Build prompt for extracting all entity mentions with exact text spans."""
+    return f"""あなたは日本語文書から固有表現（エンティティ）を抽出する専門家です。
+
+## タスク
+与えられた日本語文書から、すべてのエンティティメンション（言及）を抽出してください。
+
+## エンティティタイプ（8種類）
+  - PER: 人物
+  - ORG: 組織
+  - LOC: 場所・地名
+  - ART: 作品・人工物・賞
+  - DAT: 日付
+  - TIM: 時間
+  - MON: 金額
+  - %: パーセンテージ・数値
+
+## ルール
+- mention_textは文書中の**そのままの文字列**（verbatimな部分文字列）でなければなりません。文書に含まれない文字列を記入しないでください。
+- sentence_indexは、そのメンションが出現する文の番号（0始まり）を指定してください。
+- 同一エンティティが複数回言及される場合（共参照）、同じcanonical_nameでグループ化してください。
+  例: 「東京」「東京都」「同市」が同じ場所を指す場合、canonical_nameを「東京」に統一します。
+- 文書中のすべてのエンティティメンションを漏れなく抽出してください。
+
+## 例の文書
+{few_shot_text}
+
+## 対象文書
+{doc_text}
+
+上記の対象文書からすべてのエンティティメンションを抽出してください。"""
+
+
 def build_verification_prompt(
     doc_text: str,
     candidates: list[dict],

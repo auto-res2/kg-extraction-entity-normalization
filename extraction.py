@@ -4,10 +4,16 @@ from dataclasses import dataclass, field
 
 from google import genai
 
-from schemas import EXTRACTION_SCHEMA, VERIFICATION_SCHEMA
-from prompts import build_system_prompt, build_extraction_prompt, build_verification_prompt
+from schemas import EXTRACTION_SCHEMA, VERIFICATION_SCHEMA, SPAN_ENTITY_SCHEMA
+from prompts import (
+    build_system_prompt,
+    build_extraction_prompt,
+    build_verification_prompt,
+    build_span_entity_prompt,
+)
 from llm_client import call_gemini
 from data_loader import format_few_shot_output
+from entity_normalization import cluster_mentions, build_clustered_entity_prompt
 
 
 @dataclass
@@ -183,3 +189,71 @@ def _verify_candidates(
                 verified.append(triple)
 
     return verified
+
+
+def run_entity_normalized(
+    doc: dict,
+    few_shot: dict,
+    client,
+    schema_info: dict,
+    constraint_table: dict,
+) -> tuple[list[dict], list[Triple], dict]:
+    """Entity-normalized extraction: mention spans -> clustering -> relation extraction.
+
+    Steps:
+        1. Extract all entity mentions with span constraints (SPAN_ENTITY_SCHEMA).
+        2. Cluster mentions by canonical_name.
+        3. Build entity list from clusters.
+        4. Extract relations using clustered entity context.
+        5. Apply post-processing filters and constraints.
+    """
+    # Step 1: Extract entity mentions
+    span_system_prompt = (
+        "あなたは日本語文書から固有表現（エンティティメンション）を抽出する専門家です。"
+        "文書中のすべてのエンティティメンションを正確に抽出してください。"
+    )
+    span_user_prompt = build_span_entity_prompt(doc["doc_text"], few_shot["doc_text"])
+    mention_result = call_gemini(
+        client, span_system_prompt, span_user_prompt, SPAN_ENTITY_SCHEMA
+    )
+
+    mentions = mention_result.get("entity_mentions", [])
+    num_mentions = len(mentions)
+
+    # Step 2: Cluster mentions by canonical_name
+    clusters = cluster_mentions(mentions)
+    num_clusters = len(clusters)
+
+    # Step 3: Build entity list from clusters (for evaluation alignment)
+    entities = [
+        {"id": c["id"], "name": c["canonical_name"], "type": c["type"]}
+        for c in clusters
+    ]
+
+    # Step 4: Relation extraction with clustered entity context
+    system_prompt = build_system_prompt(schema_info["rel_info"])
+    few_shot_output = format_few_shot_output(few_shot)
+    user_prompt = build_clustered_entity_prompt(
+        doc["doc_text"], clusters, few_shot["doc_text"], few_shot_output
+    )
+
+    rel_result = call_gemini(client, system_prompt, user_prompt, EXTRACTION_SCHEMA)
+    _, triples = _parse_extraction_result(rel_result)
+    num_triples = len(triples)
+
+    # Step 5: Post-processing filters
+    valid_rels = set(schema_info["rel_info"].keys())
+    valid_types = {"PER", "ORG", "LOC", "ART", "DAT", "TIM", "MON", "%"}
+    triples = filter_invalid_labels(triples, valid_rels)
+    triples = filter_invalid_entity_types(triples, valid_types)
+    triples = apply_domain_range_constraints(triples, constraint_table)
+    after_constraints = len(triples)
+
+    stats = {
+        "num_mentions": num_mentions,
+        "num_clusters": num_clusters,
+        "num_triples": num_triples,
+        "after_constraints": after_constraints,
+    }
+
+    return entities, triples, stats

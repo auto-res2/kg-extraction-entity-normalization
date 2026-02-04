@@ -35,6 +35,26 @@ EXTRACTION_SCHEMA = {
     "required": ["entities", "relations"],
 }
 
+SPAN_ENTITY_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "entity_mentions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "mention_text": {"type": "string"},
+                    "sentence_index": {"type": "integer"},
+                    "canonical_name": {"type": "string"},
+                    "type": {"type": "string", "enum": ["PER", "ORG", "LOC", "ART", "DAT", "TIM", "MON", "%"]},
+                },
+                "required": ["mention_text", "sentence_index", "canonical_name", "type"],
+            },
+        },
+    },
+    "required": ["entity_mentions"],
+}
+
 VERIFICATION_SCHEMA = {
     "type": "object",
     "properties": {
