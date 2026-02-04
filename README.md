@@ -722,6 +722,26 @@ EntityNormはBaselineに対して:
 
 注: `num_entities_aligned` はGold vertexSetへのアライメントに成功した予測エンティティの数であり、関係に使用された予測エンティティ数とは異なる場合がある。
 
+### 6.5 アブレーションスタディ（モデル構成別比較）
+
+5つのモデル構成について、同一の10文書（JacRED devセット）でBaseline / EntityNorm の両条件を実行した結果を以下に示す。
+
+| Model Config | Baseline P | Baseline R | Baseline F1 | EntNorm P | EntNorm R | EntNorm F1 | Delta F1 |
+|---|---|---|---|---|---|---|---|
+| gemini-3-flash t=2048 | 0.298 | 0.209 | 0.246 | 0.381 | 0.216 | **0.276** | +0.030 |
+| gemini-3-flash t=0 | 0.268 | 0.176 | 0.212 | 0.289 | 0.162 | 0.208 | -0.004 |
+| gemini-2.5-flash t=2048 | 0.185 | 0.169 | 0.177 | 0.253 | 0.162 | **0.198** | +0.021 |
+| gemini-2.5-flash t=0 | 0.190 | 0.155 | 0.171 | 0.277 | 0.155 | **0.199** | +0.028 |
+| gemini-2.0-flash | 0.198 | 0.135 | 0.161 | 0.159 | 0.095 | 0.119 | -0.042 |
+
+**主な知見:**
+
+- **EntityNormは5構成中3構成でF1を改善**する。改善幅は+0.021から+0.030の範囲である
+- **最良結果**: gemini-3-flash t=2048でF1=0.276（Delta F1=+0.030）を達成した。これは全構成中の最高F1である
+- **Precisionの一貫した向上**: F1が改善した3構成では、いずれもPrecisionがBaselineを上回っている。エンティティ正規化により重複・変異エンティティが統合され、FPが削減されるためと考えられる
+- **gemini-2.0-flashでの劣化**: Delta F1=-0.042と最大の劣化を示した。gemini-2.0-flashはthinking機能を持たず、EntityNormのStep 1（スパンエンティティ抽出）で正確なverbatimスパンとcanonical_nameの生成に十分なモデル能力が不足していると考えられる。EntityNorm手法はモデルの基本能力に依存し、能力が不十分な場合はパイプラインの複雑化がノイズを増幅させるリスクがある
+- **thinking有無の影響**: gemini-3-flashではt=2048（thinking ON）がt=0（thinking OFF）を大きく上回る（F1: 0.276 vs 0.208）。一方、gemini-2.5-flashではt=0のEntNorm F1（0.199）がt=2048（0.198）とほぼ同等であり、thinkingの効果はモデル世代によって異なる
+
 ---
 
 ## 7. 分析
