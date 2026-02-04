@@ -1,0 +1,2632 @@
+{
+  "experiment": {
+    "model": "gemini-3-flash-preview",
+    "num_docs": 10,
+    "few_shot_doc": "スタッド (バンド)",
+    "timestamp": "2026-02-04T18:02:42.894766"
+  },
+  "conditions": {
+    "baseline": {
+      "per_doc": [
+        {
+          "title": "ダニエル・ウールフォール",
+          "num_gold_entities": 9,
+          "num_gold_labels": 12,
+          "num_predicted": 6,
+          "num_entities_aligned": 7,
+          "precision": 0.3333333333333333,
+          "recall": 0.16666666666666666,
+          "f1": 0.2222222222222222,
+          "tp": 2,
+          "fp": 4,
+          "fn": 10,
+          "fp_details": [
+            {
+              "head": "ダニエル・バーリー・ウールフォール",
+              "relation": "P6",
+              "tail": "国際サッカー連盟",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ダニエル・バーリー・ウールフォール",
+              "relation": "P6",
+              "tail": "イングランドサッカー協会",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ダニエル・バーリー・ウールフォール",
+              "relation": "P6",
+              "tail": "イングランドランカシャー州サッカー協会",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "国際サッカー連盟",
+              "relation": "P112",
+              "tail": "ダニエル・バーリー・ウールフォール",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 0,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 7,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 8,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 8,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 3,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 4,
+              "relation": "P463"
+            }
+          ]
+        },
+        {
+          "title": "アンソニー世界を駆ける",
+          "num_gold_entities": 9,
+          "num_gold_labels": 6,
+          "num_predicted": 7,
+          "num_entities_aligned": 9,
+          "precision": 0.42857142857142855,
+          "recall": 0.5,
+          "f1": 0.4615384615384615,
+          "tp": 3,
+          "fp": 4,
+          "fn": 3,
+          "fp_details": [
+            {
+              "head": "アンソニー世界を駆ける",
+              "relation": "P137",
+              "tail": "CNN",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "アンソニー世界を駆ける",
+              "relation": "P569",
+              "tail": "2013年4月",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "アンソニー・ボーディン",
+              "relation": "P170",
+              "tail": "キッチン・コンフィデンシャル",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "アンソニー・ボーディン",
+              "relation": "P175",
+              "tail": "アンソニー世界を駆ける",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 2,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 8,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 8,
+              "relation": "P170"
+            }
+          ]
+        },
+        {
+          "title": "青ナイル州",
+          "num_gold_entities": 11,
+          "num_gold_labels": 20,
+          "num_predicted": 7,
+          "num_entities_aligned": 11,
+          "precision": 0.2857142857142857,
+          "recall": 0.1,
+          "f1": 0.14814814814814817,
+          "tp": 2,
+          "fp": 5,
+          "fn": 18,
+          "fp_details": [
+            {
+              "head": "青ナイル州",
+              "relation": "P131",
+              "tail": "青ナイル川",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ロセイレスダム",
+              "relation": "P276",
+              "tail": "ダマズィーン",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "ロセイレスダム",
+              "relation": "P361",
+              "tail": "スーダン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "スーダン政府軍",
+              "relation": "P1344",
+              "tail": "青ナイル州",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "スーダン政府軍",
+              "relation": "P1344",
+              "tail": "南コルドファーン州",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 2,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P1376"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 6,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 10,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 4,
+              "relation": "P276"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 9,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 0,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 6,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 1,
+              "relation": "P361"
+            }
+          ]
+        },
+        {
+          "title": "小谷建仁",
+          "num_gold_entities": 17,
+          "num_gold_labels": 11,
+          "num_predicted": 15,
+          "num_entities_aligned": 16,
+          "precision": 0.5333333333333333,
+          "recall": 0.7272727272727273,
+          "f1": 0.6153846153846153,
+          "tp": 8,
+          "fp": 7,
+          "fn": 3,
+          "fp_details": [
+            {
+              "head": "小谷建仁",
+              "relation": "P175",
+              "tail": "肌の隙間",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P175",
+              "tail": "スミレ人形",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P1344",
+              "tail": "Abed",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P937",
+              "tail": "インド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P937",
+              "tail": "マダガスカル",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P175",
+              "tail": "君へ。",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P937",
+              "tail": "インド",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 5,
+              "tail_idx": 4,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 4,
+              "relation": "P361"
+            }
+          ]
+        },
+        {
+          "title": "窪田僚",
+          "num_gold_entities": 18,
+          "num_gold_labels": 11,
+          "num_predicted": 16,
+          "num_entities_aligned": 17,
+          "precision": 0.0625,
+          "recall": 0.09090909090909091,
+          "f1": 0.07407407407407407,
+          "tp": 1,
+          "fp": 15,
+          "fn": 10,
+          "fp_details": [
+            {
+              "head": "窪田僚",
+              "relation": "P569",
+              "tail": "1952年6月7日",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P27",
+              "tail": "日本",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P19",
+              "tail": "北海道",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P69",
+              "tail": "北海道大学工学部建築学科",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P69",
+              "tail": "経済学部",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P1344",
+              "tail": "エンピツ賞",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "エンピツ賞",
+              "relation": "P112",
+              "tail": "ビックリハウス",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "集英社コバルト文庫",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "角川スニーカー文庫",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "学習研究社",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "ヘッドフォン・ララバイ",
+              "relation": "P170",
+              "tail": "窪田僚",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "ヘッドフォン・ララバイ",
+              "relation": "P175",
+              "tail": "シブがき隊",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "大人になりたい",
+              "relation": "P175",
+              "tail": "かとうれいこ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "大人になりたい",
+              "relation": "P170",
+              "tail": "窪田僚",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "ディズニー",
+              "reason": "entity_not_aligned"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P27"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 13,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P569"
+            },
+            {
+              "head_idx": 15,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P19"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 3,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 4,
+              "relation": "P69"
+            }
+          ]
+        },
+        {
+          "title": "イーオー",
+          "num_gold_entities": 17,
+          "num_gold_labels": 10,
+          "num_predicted": 13,
+          "num_entities_aligned": 17,
+          "precision": 0.07692307692307693,
+          "recall": 0.1,
+          "f1": 0.08695652173913043,
+          "tp": 1,
+          "fp": 12,
+          "fn": 9,
+          "fp_details": [
+            {
+              "head": "ゼウス",
+              "relation": "P26",
+              "tail": "イーオー",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P19",
+              "tail": "ギリシア",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P20",
+              "tail": "エジプト",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P40",
+              "tail": "イーナコス",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P40",
+              "tail": "ペイレーン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P40",
+              "tail": "イーアソス",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "イーナコス",
+              "relation": "P276",
+              "tail": "アルゴス地方",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "アルゴス地方",
+              "relation": "P361",
+              "tail": "アルゴリス",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "アルゴス",
+              "relation": "P131",
+              "tail": "アルゴス地方",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "ヘーラー",
+              "relation": "P26",
+              "tail": "ゼウス",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P937",
+              "tail": "アルゴス",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P108",
+              "tail": "ヘーラー",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 4,
+              "tail_idx": 0,
+              "relation": "P40"
+            },
+            {
+              "head_idx": 16,
+              "tail_idx": 0,
+              "relation": "P40"
+            },
+            {
+              "head_idx": 16,
+              "tail_idx": 5,
+              "relation": "P1441"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P1441"
+            },
+            {
+              "head_idx": 14,
+              "tail_idx": 0,
+              "relation": "P40"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 16,
+              "relation": "P674"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 5,
+              "relation": "P1441"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 0,
+              "relation": "P674"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 1,
+              "relation": "P674"
+            }
+          ]
+        },
+        {
+          "title": "堂山鉄橋",
+          "num_gold_entities": 15,
+          "num_gold_labels": 9,
+          "num_predicted": 12,
+          "num_entities_aligned": 15,
+          "precision": 0.16666666666666666,
+          "recall": 0.2222222222222222,
+          "f1": 0.1904761904761905,
+          "tp": 2,
+          "fp": 10,
+          "fn": 7,
+          "fp_details": [
+            {
+              "head": "堂山鉄橋",
+              "relation": "P131",
+              "tail": "ソウル特別市",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "堂山鉄橋",
+              "relation": "P121",
+              "tail": "ソウル交通公社2号線",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ソウル交通公社2号線",
+              "relation": "P527",
+              "tail": "堂山駅",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ソウル交通公社2号線",
+              "relation": "P527",
+              "tail": "合井駅",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "堂山鉄橋",
+              "relation": "P569",
+              "tail": "1983年11月",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "堂山鉄橋",
+              "relation": "P569",
+              "tail": "1984年5月22日",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "聖水大橋崩壊事故",
+              "relation": "P569",
+              "tail": "1994年",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "2号線",
+              "relation": "P527",
+              "tail": "堂山駅",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "2号線",
+              "relation": "P527",
+              "tail": "合井駅",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "2号線",
+              "relation": "P527",
+              "tail": "弘大入口",
+              "reason": "entity_not_aligned"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 5,
+              "relation": "P276"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P276"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 5,
+              "relation": "P276"
+            }
+          ]
+        },
+        {
+          "title": "木村千歌",
+          "num_gold_entities": 21,
+          "num_gold_labels": 25,
+          "num_predicted": 13,
+          "num_entities_aligned": 20,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 13,
+          "fn": 25,
+          "fp_details": [
+            {
+              "head": "木村千歌",
+              "relation": "P569",
+              "tail": "1964年5月12日",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P27",
+              "tail": "日本",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P19",
+              "tail": "東京都足立区",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P69",
+              "tail": "東京都立足立西高等学校",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "こたつむり伝説",
+              "relation": "P123",
+              "tail": "講談社",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P170",
+              "tail": "こたつむり伝説",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P170",
+              "tail": "パジャマ・デート",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P170",
+              "tail": "カンベンしてちょ!",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P170",
+              "tail": "あずきちゃん",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "あずきちゃん",
+              "relation": "P123",
+              "tail": "講談社",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P170",
+              "tail": "マイニチ",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "マイニチ",
+              "relation": "P123",
+              "tail": "竹書房",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P3373",
+              "tail": "高山みなみ",
+              "reason": "entity_not_aligned"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P27"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 5,
+              "relation": "P69"
+            },
+            {
+              "head_idx": 18,
+              "tail_idx": 19,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 10,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 7,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 8,
+              "relation": "P123"
+            },
+            {
+              "head_idx": 11,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 16,
+              "tail_idx": 15,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 9,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 15,
+              "tail_idx": 16,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P569"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 4,
+              "relation": "P19"
+            },
+            {
+              "head_idx": 19,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 18,
+              "tail_idx": 17,
+              "relation": "P123"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 13,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 15,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 16,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 19,
+              "tail_idx": 18,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 4,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 4,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 12,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 14,
+              "tail_idx": 0,
+              "relation": "P170"
+            }
+          ]
+        },
+        {
+          "title": "バハン地区",
+          "num_gold_entities": 18,
+          "num_gold_labels": 28,
+          "num_predicted": 12,
+          "num_entities_aligned": 16,
+          "precision": 0.08333333333333333,
+          "recall": 0.03571428571428571,
+          "f1": 0.05,
+          "tp": 1,
+          "fp": 11,
+          "fn": 27,
+          "fp_details": [
+            {
+              "head": "バハン地区",
+              "relation": "P131",
+              "tail": "サナーグ州",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン地区",
+              "relation": "P131",
+              "tail": "ソマリア",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン県",
+              "relation": "P131",
+              "tail": "サナーグ州",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン地区",
+              "relation": "P131",
+              "tail": "ソマリランド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン",
+              "relation": "P131",
+              "tail": "バハン地区",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン",
+              "relation": "P131",
+              "tail": "バハン県",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン地区",
+              "relation": "P131",
+              "tail": "ラス・コレー地区",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "サナーグ州",
+              "relation": "P131",
+              "tail": "ソマリランド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ソマリランド",
+              "relation": "P112",
+              "tail": "2002年",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "国際連合開発計画",
+              "relation": "P108",
+              "tail": "ソマリア",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "国際連合人道問題調整事務所",
+              "relation": "P108",
+              "tail": "ソマリア",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 2,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 6,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 0,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 6,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 8,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 0,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 7,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 3,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 0,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 0,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P527"
+            }
+          ]
+        },
+        {
+          "title": "ジョー・ギブス",
+          "num_gold_entities": 31,
+          "num_gold_labels": 16,
+          "num_predicted": 20,
+          "num_entities_aligned": 30,
+          "precision": 0.15,
+          "recall": 0.1875,
+          "f1": 0.16666666666666663,
+          "tp": 3,
+          "fp": 17,
+          "fn": 13,
+          "fp_details": [
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P937",
+              "tail": "アメリカ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P276",
+              "tail": "キングストン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "ラヴ・オブ・コモン・ピープル",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P108",
+              "tail": "コクソン・ドッド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P108",
+              "tail": "リー・ペリー",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "エチオピアンズ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "デルロイ・ウィルソン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "ヘプトーンズ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P108",
+              "tail": "エロル・トンプソン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "プロフェッショナルズ",
+              "relation": "P527",
+              "tail": "ロビー・シェイクスピア",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "プロフェッショナルズ",
+              "relation": "P527",
+              "tail": "スライ・ダンバー",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "プロフェッショナルズ",
+              "relation": "P527",
+              "tail": "アール・チナ・スミス",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P108",
+              "tail": "デニス・ブラウン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P108",
+              "tail": "ビッグ・ユース",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P1830",
+              "tail": "サムワン・ラブズ・ユー・ハニー",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "J・C・ロッジ",
+              "relation": "P175",
+              "tail": "サムワン・ラブズ・ユー・ハニー",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "チャーリー・プライド",
+              "relation": "P170",
+              "tail": "サムワン・ラブズ・ユー・ハニー",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 3,
+              "relation": "P36"
+            },
+            {
+              "head_idx": 23,
+              "tail_idx": 20,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 29,
+              "tail_idx": 28,
+              "relation": "P175"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 1,
+              "relation": "P1376"
+            },
+            {
+              "head_idx": 29,
+              "tail_idx": 30,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 3,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 29,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 22,
+              "tail_idx": 20,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 21,
+              "tail_idx": 20,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 14,
+              "tail_idx": 13,
+              "relation": "P175"
+            },
+            {
+              "head_idx": 14,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 1,
+              "relation": "P361"
+            }
+          ]
+        }
+      ],
+      "aggregate": {
+        "precision": 0.19008264462809918,
+        "recall": 0.1554054054054054,
+        "f1": 0.17100371747211895,
+        "tp": 23,
+        "fp": 98,
+        "fn": 125
+      }
+    },
+    "entity_normalization": {
+      "per_doc": [
+        {
+          "title": "ダニエル・ウールフォール",
+          "num_gold_entities": 9,
+          "num_gold_labels": 12,
+          "num_predicted": 3,
+          "num_entities_aligned": 8,
+          "precision": 0.6666666666666666,
+          "recall": 0.16666666666666666,
+          "f1": 0.26666666666666666,
+          "tp": 2,
+          "fp": 1,
+          "fn": 10,
+          "fp_details": [
+            {
+              "head": "国際サッカー連盟",
+              "relation": "P112",
+              "tail": "ダニエル・バーリー・ウールフォール",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 0,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 7,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 8,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 8,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 3,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 4,
+              "relation": "P463"
+            }
+          ],
+          "stats": {
+            "num_mentions": 14,
+            "num_clusters": 10,
+            "num_triples": 8,
+            "after_constraints": 3
+          }
+        },
+        {
+          "title": "アンソニー世界を駆ける",
+          "num_gold_entities": 9,
+          "num_gold_labels": 6,
+          "num_predicted": 6,
+          "num_entities_aligned": 9,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 3,
+          "fp": 3,
+          "fn": 3,
+          "fp_details": [
+            {
+              "head": "アンソニー世界を駆ける",
+              "relation": "P137",
+              "tail": "CNN",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "アンソニー世界を駆ける",
+              "relation": "P569",
+              "tail": "2013年4月",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "アンソニー・ボーディン",
+              "relation": "P1441",
+              "tail": "アンソニー世界を駆ける",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 2,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 8,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 8,
+              "relation": "P170"
+            }
+          ],
+          "stats": {
+            "num_mentions": 17,
+            "num_clusters": 16,
+            "num_triples": 7,
+            "after_constraints": 6
+          }
+        },
+        {
+          "title": "青ナイル州",
+          "num_gold_entities": 11,
+          "num_gold_labels": 20,
+          "num_predicted": 5,
+          "num_entities_aligned": 11,
+          "precision": 0.6,
+          "recall": 0.15,
+          "f1": 0.24,
+          "tp": 3,
+          "fp": 2,
+          "fn": 17,
+          "fp_details": [
+            {
+              "head": "青ナイル州",
+              "relation": "P131",
+              "tail": "青ナイル川",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ロセイレスダム",
+              "relation": "P276",
+              "tail": "ダマジン",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 2,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P1376"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 6,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 10,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 4,
+              "relation": "P276"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 9,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 0,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 1,
+              "relation": "P361"
+            }
+          ],
+          "stats": {
+            "num_mentions": 18,
+            "num_clusters": 15,
+            "num_triples": 12,
+            "after_constraints": 5
+          }
+        },
+        {
+          "title": "小谷建仁",
+          "num_gold_entities": 17,
+          "num_gold_labels": 11,
+          "num_predicted": 7,
+          "num_entities_aligned": 16,
+          "precision": 0.42857142857142855,
+          "recall": 0.2727272727272727,
+          "f1": 0.33333333333333326,
+          "tp": 3,
+          "fp": 4,
+          "fn": 8,
+          "fp_details": [
+            {
+              "head": "小谷建仁",
+              "relation": "P937",
+              "tail": "インド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P937",
+              "tail": "マダガスカル",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P937",
+              "tail": "インド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "小谷建仁",
+              "relation": "P108",
+              "tail": "コムスシフト",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 6,
+              "tail_idx": 1,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 4,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 15,
+              "tail_idx": 14,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 4,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 1,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 8,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 16,
+              "relation": "P463"
+            }
+          ],
+          "stats": {
+            "num_mentions": 23,
+            "num_clusters": 20,
+            "num_triples": 15,
+            "after_constraints": 7
+          }
+        },
+        {
+          "title": "窪田僚",
+          "num_gold_entities": 18,
+          "num_gold_labels": 11,
+          "num_predicted": 16,
+          "num_entities_aligned": 16,
+          "precision": 0.0625,
+          "recall": 0.09090909090909091,
+          "f1": 0.07407407407407407,
+          "tp": 1,
+          "fp": 15,
+          "fn": 10,
+          "fp_details": [
+            {
+              "head": "窪田僚",
+              "relation": "P569",
+              "tail": "1952-06-07",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P27",
+              "tail": "日本",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P19",
+              "tail": "北海道",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P69",
+              "tail": "北海道大学",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P69",
+              "tail": "工学部建築学科",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P69",
+              "tail": "経済学部",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P166",
+              "tail": "エンピツ賞",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "集英社コバルト文庫",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "角川スニーカー文庫",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "学習研究社",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "ヘッドフォン・ララバイ",
+              "relation": "P170",
+              "tail": "窪田僚",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "ヘッドフォン・ララバイ",
+              "relation": "P175",
+              "tail": "シブがき隊",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "大人になりたい",
+              "relation": "P170",
+              "tail": "窪田僚",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "大人になりたい",
+              "relation": "P175",
+              "tail": "かとうれいこ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "窪田僚",
+              "relation": "P108",
+              "tail": "ディズニー",
+              "reason": "entity_not_aligned"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P27"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 13,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P569"
+            },
+            {
+              "head_idx": 15,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P19"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 3,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 4,
+              "relation": "P69"
+            }
+          ],
+          "stats": {
+            "num_mentions": 22,
+            "num_clusters": 21,
+            "num_triples": 17,
+            "after_constraints": 16
+          }
+        },
+        {
+          "title": "イーオー",
+          "num_gold_entities": 17,
+          "num_gold_labels": 10,
+          "num_predicted": 8,
+          "num_entities_aligned": 17,
+          "precision": 0.5,
+          "recall": 0.4,
+          "f1": 0.4444444444444445,
+          "tp": 4,
+          "fp": 4,
+          "fn": 6,
+          "fp_details": [
+            {
+              "head": "ゼウス",
+              "relation": "P26",
+              "tail": "イーオー",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "アルゴリス",
+              "relation": "P361",
+              "tail": "アルゴス地方",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P937",
+              "tail": "アルゴス",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "イーオー",
+              "relation": "P108",
+              "tail": "ヘーラー",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 16,
+              "tail_idx": 5,
+              "relation": "P1441"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P1441"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 16,
+              "relation": "P674"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 5,
+              "relation": "P1441"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 0,
+              "relation": "P674"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 1,
+              "relation": "P674"
+            }
+          ],
+          "stats": {
+            "num_mentions": 29,
+            "num_clusters": 19,
+            "num_triples": 12,
+            "after_constraints": 8
+          }
+        },
+        {
+          "title": "堂山鉄橋",
+          "num_gold_entities": 15,
+          "num_gold_labels": 9,
+          "num_predicted": 8,
+          "num_entities_aligned": 10,
+          "precision": 0.25,
+          "recall": 0.2222222222222222,
+          "f1": 0.23529411764705882,
+          "tp": 2,
+          "fp": 6,
+          "fn": 7,
+          "fp_details": [
+            {
+              "head": "堂山鉄橋",
+              "relation": "P131",
+              "tail": "ソウル特別市",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "堂山鉄橋",
+              "relation": "P527",
+              "tail": "堂山駅",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "堂山鉄橋",
+              "relation": "P527",
+              "tail": "合井駅",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "2号線",
+              "relation": "P361",
+              "tail": "ソウル交通公社2号線",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "堂山",
+              "relation": "P361",
+              "tail": "堂山駅",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "合井",
+              "relation": "P361",
+              "tail": "合井駅",
+              "reason": "entity_not_aligned"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 5,
+              "relation": "P276"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P276"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 5,
+              "relation": "P276"
+            }
+          ],
+          "stats": {
+            "num_mentions": 25,
+            "num_clusters": 22,
+            "num_triples": 12,
+            "after_constraints": 8
+          }
+        },
+        {
+          "title": "木村千歌",
+          "num_gold_entities": 21,
+          "num_gold_labels": 25,
+          "num_predicted": 9,
+          "num_entities_aligned": 19,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 25,
+          "fp_details": [
+            {
+              "head": "木村千歌",
+              "relation": "P569",
+              "tail": "1964-05-12",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P27",
+              "tail": "日本",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P19",
+              "tail": "東京都足立区",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P69",
+              "tail": "東京都立足立西高等学校",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "こたつむり伝説",
+              "relation": "P123",
+              "tail": "講談社",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "あずきちゃん",
+              "relation": "P123",
+              "tail": "講談社",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "マイニチ",
+              "relation": "P123",
+              "tail": "竹書房",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P3373",
+              "tail": "高山みなみ",
+              "reason": "entity_not_aligned"
+            },
+            {
+              "head": "木村千歌",
+              "relation": "P1344",
+              "tail": "あずきちゃん",
+              "reason": "entity_not_aligned"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P27"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 5,
+              "relation": "P69"
+            },
+            {
+              "head_idx": 18,
+              "tail_idx": 19,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 10,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 7,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 8,
+              "relation": "P123"
+            },
+            {
+              "head_idx": 11,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 16,
+              "tail_idx": 15,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 9,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 15,
+              "tail_idx": 16,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P569"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 4,
+              "relation": "P19"
+            },
+            {
+              "head_idx": 19,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 18,
+              "tail_idx": 17,
+              "relation": "P123"
+            },
+            {
+              "head_idx": 4,
+              "tail_idx": 3,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 13,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 15,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 16,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 19,
+              "tail_idx": 18,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 4,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 4,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 12,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 14,
+              "tail_idx": 0,
+              "relation": "P170"
+            }
+          ],
+          "stats": {
+            "num_mentions": 26,
+            "num_clusters": 22,
+            "num_triples": 14,
+            "after_constraints": 9
+          }
+        },
+        {
+          "title": "バハン地区",
+          "num_gold_entities": 18,
+          "num_gold_labels": 28,
+          "num_predicted": 9,
+          "num_entities_aligned": 11,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 28,
+          "fp_details": [
+            {
+              "head": "バハン地区",
+              "relation": "P131",
+              "tail": "サナーグ州",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン地区",
+              "relation": "P131",
+              "tail": "ソマリア",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン地区",
+              "relation": "P131",
+              "tail": "ソマリランド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン",
+              "relation": "P131",
+              "tail": "バハン地区",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "バハン地区",
+              "relation": "P276",
+              "tail": "バハン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ラス・コレー地区",
+              "relation": "P361",
+              "tail": "バハン地区",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ソマリランド",
+              "relation": "P361",
+              "tail": "旧イギリス領ソマリランド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "サナーグ州",
+              "relation": "P131",
+              "tail": "ソマリランド",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ソマリランド",
+              "relation": "P112",
+              "tail": "バハン地区",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 2,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 6,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 0,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 6,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 8,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 0,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 7,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 5,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 3,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 5,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 2,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 3,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 0,
+              "tail_idx": 1,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 7,
+              "tail_idx": 0,
+              "relation": "P361"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 0,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 6,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 2,
+              "tail_idx": 0,
+              "relation": "P527"
+            }
+          ],
+          "stats": {
+            "num_mentions": 43,
+            "num_clusters": 21,
+            "num_triples": 18,
+            "after_constraints": 9
+          }
+        },
+        {
+          "title": "ジョー・ギブス",
+          "num_gold_entities": 31,
+          "num_gold_labels": 16,
+          "num_predicted": 12,
+          "num_entities_aligned": 31,
+          "precision": 0.4166666666666667,
+          "recall": 0.3125,
+          "f1": 0.35714285714285715,
+          "tp": 5,
+          "fp": 7,
+          "fn": 11,
+          "fp_details": [
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P937",
+              "tail": "アメリカ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "エチオピアンズ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "デルロイ・ウィルソン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "ヘプトーンズ",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P108",
+              "tail": "エロル・トンプソン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "デニス・ブラウン",
+              "reason": "wrong_relation"
+            },
+            {
+              "head": "ジョー・ギブス",
+              "relation": "P170",
+              "tail": "ビッグ・ユース",
+              "reason": "wrong_relation"
+            }
+          ],
+          "fn_details": [
+            {
+              "head_idx": 1,
+              "tail_idx": 3,
+              "relation": "P36"
+            },
+            {
+              "head_idx": 23,
+              "tail_idx": 20,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 1,
+              "relation": "P1376"
+            },
+            {
+              "head_idx": 1,
+              "tail_idx": 3,
+              "relation": "P527"
+            },
+            {
+              "head_idx": 29,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 22,
+              "tail_idx": 20,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 21,
+              "tail_idx": 20,
+              "relation": "P463"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 1,
+              "relation": "P131"
+            },
+            {
+              "head_idx": 9,
+              "tail_idx": 0,
+              "relation": "P112"
+            },
+            {
+              "head_idx": 14,
+              "tail_idx": 0,
+              "relation": "P170"
+            },
+            {
+              "head_idx": 3,
+              "tail_idx": 1,
+              "relation": "P361"
+            }
+          ],
+          "stats": {
+            "num_mentions": 37,
+            "num_clusters": 33,
+            "num_triples": 29,
+            "after_constraints": 12
+          }
+        }
+      ],
+      "aggregate": {
+        "precision": 0.27710843373493976,
+        "recall": 0.1554054054054054,
+        "f1": 0.19913419913419914,
+        "tp": 23,
+        "fp": 60,
+        "fn": 125
+      }
+    }
+  }
+}
